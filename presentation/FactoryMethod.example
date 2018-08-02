@@ -1,0 +1,13 @@
+function InboxFactory(name) {
+  function createName() {
+    return {
+        name: name
+    }
+  }
+  return {
+    getName: createName
+  };
+}
+angular
+  .module('app')
+  .factory('InboxFactory', InboxFactory);

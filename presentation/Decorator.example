@@ -1,0 +1,23 @@
+class SimpleCoffee{
+    getCost() {
+        return 10
+    }
+
+    getDescription() {
+        return 'Simple coffee'
+    }
+}
+class MilkCoffee {
+    constructor(coffee) {
+        this.coffee = coffee
+    }
+    getCost() {
+        return this.coffee.getCost() + 2
+    }
+    getDescription() {
+        return this.coffee.getDescription() + ', milk'
+    }
+}
+let someCoffee
+someCoffee = new SimpleCoffee()
+someCoffee = new MilkCoffee(someCoffee)

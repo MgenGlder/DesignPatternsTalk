@@ -1,0 +1,18 @@
+class Monkey {
+    shout() {
+        console.log('Ooh oo aa aa!')
+    }
+
+    accept(operation) {
+        operation.visit(this)
+    }
+}
+
+const speak = {
+    visit(monkey){
+        monkey.shout()
+    }
+}
+
+const monkey = new Monkey()
+monkey.accept(speak)    // Ooh oo aa aa!    

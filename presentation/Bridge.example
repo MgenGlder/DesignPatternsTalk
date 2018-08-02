@@ -1,0 +1,19 @@
+class About{ 
+    constructor(theme) {
+        this.theme = theme
+    }
+    
+    getContent() {
+        return "About page in " . this.theme.getColor()
+    }
+}
+
+class DarkTheme{
+    getColor() {
+        return 'Dark Black'
+    }
+}
+
+const darkTheme = new DarkTheme()
+
+const about = new About(darkTheme)

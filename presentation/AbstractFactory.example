@@ -1,0 +1,27 @@
+public interface Color {
+   void fill();
+}
+
+public class Green implements Color {
+
+   @Override
+   public void fill() {
+      System.out.println("Inside Green::fill() method.");
+   }
+}
+
+public abstract class AbstractFactory {
+   abstract Color getColor(String color);
+}
+
+public class ColorFactory extends AbstractFactory {
+   @Override
+   Color getColor(String color) {
+   
+      if(color == null){
+         return null;
+      } else if (color == 'green'){
+          return new Green();
+      }		
+   }
+}
